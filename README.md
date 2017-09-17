@@ -16,3 +16,6 @@ Prečítajte si priložený .PDF článok, ktorý bol publikovaný v mierne pozm
 # TIP
 * Server php5.sk ponúka freehosting na doméne 3. radu s HTTPS protokolom - na toto riešenie sa výborne hodí
 * Projekt sa dá ľahko vložiť aj do projektov inteligetnej domácnosti atď.
+* Spoločne s web časťou môžete riešenie využiť aj pre iné procesory, mikropočítače
+# PODPORA A KONTAKT
+* Ak ma chcete podporiť/kontaktovať, navštívte moju stránku: https://arduino.php5.sk
