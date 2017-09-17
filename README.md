@@ -1,5 +1,5 @@
 # Ovládanie hlasom 
-# NodeMCU/ARDUINO/ESP32/ESP8266/ORANGEPI/RASPBERRY projekty
+Doskupné pre: NodeMCU/Arduino/ESP32/ESP8266/Orange Pi/Raspberry projekty
 Projekt je zameraný ako ukážkové demo pre ovládanie hlasom pre akýkoľvek mikrokontróler, mikroprocesor, mikropočítač, ktorý vieme napojiť do internetu. Priamo v projekte je aj vzorový kód pre NodeMCU. Riešenie bolo testované pod PHP 5.6, 7.0 a s mikrokontrolérom NodeMCU v3 Lolin. Celé riešenie má výlučne výukový charakter, nejedná sa o profi riešenie.
 # Technológie v projekte
 * jazyk PHP, C, AJAX, Javascript
