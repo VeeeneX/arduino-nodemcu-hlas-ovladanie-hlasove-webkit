@@ -12,6 +12,11 @@ Projekt je zameraný ako ukážkové demo pre ovládanie hlasom pre akýkoľvek 
 * Prehliadač Chrome
 * Pripojenie k internetu
 * NodeMCU flashnutú na ArduinoIDE
+# Zmena jazyka 
+* Zložka PHP index.php --> recognition.lang
+* Slovenčina: recognition.lang = "sk-SK";
+* Čeština:  recognition.lang = "cs-CZ";
+* Angličtina: recognition.lang = "en-US";
 # TIP
 * Server php5.sk ponúka freehosting na doméne 3. radu s HTTPS protokolom - na toto riešenie sa výborne hodí
 * Projekt sa dá ľahko vložiť aj do projektov inteligetnej domácnosti atď.
