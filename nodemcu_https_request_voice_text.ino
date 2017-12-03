@@ -1,5 +1,5 @@
-#include <ESP8266WiFi.h>
-#include <WiFiClientSecure.h>
+#include <ESP8266WiFi.h> //kniznica importovana v Arduine core, testovana verzia 2.3.0
+#include <WiFiClientSecure.h> //kniznica importovana v Arduine core, testovana verzia 2.3.0
 const int led1 = 16;
 const int led2 = 5;
 const int led3 = 4;
