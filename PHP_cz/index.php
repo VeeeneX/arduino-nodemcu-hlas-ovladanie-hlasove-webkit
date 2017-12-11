@@ -1,10 +1,10 @@
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
 <div class="login">
     <form id="labnol" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
-    	<input type="text" name="preklad" id="transcript" placeholder="Pre textovú požiadavku kliknite na pole" />
-      <img onclick="startDictation();" src="decibel.png" alt="Pre požiadavku hlasom kliknite na mikrofón!">
-         <input type="submit" name="submit" value="Odoslať textovú požiadavku">
-         <center><a href="preklady.txt"><font color="white">Aktuálny obsah .txt súboru</font></a></center>
+    	<input type="text" name="preklad" id="transcript" placeholder="Pro textovou požadavku hlasem klikněte na pole" />
+      <img onclick="startDictation();" src="decibel.png" alt="Pro požadavku hlasem klikněte na mikrofon">
+         <input type="submit" name="submit" value="Odeslat textovou požadavku">
+         <center><a href="preklady.txt"><font color="white">Aktuální obsah .txt souboru</font></a></center>
     </form>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
