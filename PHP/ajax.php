@@ -4,10 +4,11 @@
      $preklad = trim( $preklad );
      if($preklad == ""){
     echo "Prázdne pole ťažko zapíšem :-)!";
+    exit();
 	 file_put_contents("preklady.txt", "Prazdny preklad");
   }elseif(strlen($prekklad) > 50){
     echo "Tvoja požiadavka je príliš dlhá!";
-	 file_put_contents("preklady.txt", "Dlhy preklad");
+	 exit();
   }else{
     
      if ($preklad=="Zapni LED1" || $preklad=="Zapni LED 1" || $preklad=="Zapni led 1" || $preklad=="Zapni led1" || $preklad=="Zapni let1" || $preklad=="Zapni let 1" || $preklad=="Zapni ledku1" || $preklad=="Zapni ledku 1" || $preklad=="Zapni letku1" || $preklad=="Zapni letku 1"){
@@ -41,10 +42,6 @@
      else if ($preklad=="Vypni" || $preklad=="Vypnúť" || $preklad=="Vypni všetko" || $preklad=="Vypni diódy"){
               
       file_put_contents("preklady.txt", 'Vypni');}
-     else{
-	 	 file_put_contlents("preklady.txt", 'Neuspesny preklad');
-		
-		
-	 }}
+     }
 
 ?>
