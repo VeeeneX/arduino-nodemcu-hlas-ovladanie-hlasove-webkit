@@ -44,5 +44,4 @@
       file_put_contents("preklady.txt", 'Vypni');
      }
      }
-
 ?>
