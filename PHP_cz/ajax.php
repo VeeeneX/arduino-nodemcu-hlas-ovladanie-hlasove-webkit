@@ -3,11 +3,11 @@
    $preklad = htmlspecialchars($preklad);
      $preklad = trim( $preklad );
      if($preklad == ""){
-    echo "Prázdne pole ťažko zapíšem :-)!";
+    echo "Prázdne pole nezapíšu :-)!";
     exit();
-	 file_put_contents("preklady.txt", "Prazdny preklad");
+	
   }elseif(strlen($prekklad) > 50){
-    echo "Tvoja požiadavka je príliš dlhá!";
+    echo "Příliš dlouhé slovo!!";
 	 exit();
   }else{
     
@@ -41,7 +41,8 @@
      }
      else if ($preklad=="Vypni" || $preklad=="Vypnout" || $preklad=="Vypni všechno" || $preklad=="Vypnout všechno" || $preklad=="Vypnout vše" || $preklad=="Vypni vše"){
               
-      file_put_contents("preklady.txt", 'Vypni');}
+      file_put_contents("preklady.txt", 'Vypni');
+     }
      }
 
 ?>
