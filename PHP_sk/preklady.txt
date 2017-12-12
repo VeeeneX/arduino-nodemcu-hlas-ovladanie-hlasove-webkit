@@ -1,1 +1,1 @@
-Ahoj
+Zapni LED 1
