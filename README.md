@@ -1,5 +1,10 @@
 # Ovládanie hlasom 
 Projekt je zameraný ako ukážkové demo pre ovládanie hlasom pre akýkoľvek mikrokontróler, mikroprocesor, mikropočítač, ktorý vieme napojiť do internetu. Priamo v projekte je aj vzorový kód pre NodeMCU. Riešenie bolo testované pod PHP 5.6, 7.0 a s mikrokontrolérom NodeMCU v3 Lolin. Celé riešenie má výlučne výukový charakter, nejedná sa o profi riešenie. Riešenie nie je možné použiť na firemné (priemyselné) účely!
+
+# PODPORA A KONTAKT
+* Ak ma chcete podporiť/kontaktovať, navštívte moju stránku: https://arduino.php5.sk
+![alt text](https://researchautism.org/wp-content/uploads/2016/03/interface-donate-hand-graphic-icon.png)
+
 # Príkazy v SK jazyku
 * 1 vyslovujte ako jeden alebo jedna
 * možné použiť pre 1-4
@@ -43,11 +48,5 @@ Projekt je zameraný ako ukážkové demo pre ovládanie hlasom pre akýkoľvek 
 * Slovenčina: recognition.lang = "sk-SK";
 * Čeština:  recognition.lang = "cs-CZ";
 * Angličtina: recognition.lang = "en-US";
+* Pre všetky dostupné jazyky pozri: https://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx
 
-# TIP
-* Server php5.sk ponúka freehosting na doméne 3. radu s HTTPS protokolom - na toto riešenie sa výborne hodí
-* Projekt sa dá ľahko vložiť aj do projektov inteligetnej domácnosti atď.
-* Spoločne s web časťou môžete riešenie využiť aj pre iné procesory, mikropočítače
-
-# PODPORA A KONTAKT
-* Ak ma chcete podporiť/kontaktovať, navštívte moju stránku: https://arduino.php5.sk
