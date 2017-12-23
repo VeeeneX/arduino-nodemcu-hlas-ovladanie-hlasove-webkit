@@ -11,7 +11,7 @@ Projekt je zameraný ako ukážkové demo pre ovládanie hlasom pre akýkoľvek 
 * Vypni  všetko
 * Zapnúť všetko
 * Vypnúť všetko
-# Príkazy v SK jazyku
+# Príkazy v CZ jazyku
 * 1 vyslovujte ako jeden alebo jedna
 * možné použiť pre 1-4
 * Zapni LED 1
