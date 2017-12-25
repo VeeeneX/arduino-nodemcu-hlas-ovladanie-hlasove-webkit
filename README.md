@@ -1,5 +1,12 @@
 # Ovládanie hlasom 
-Projekt je zameraný ako ukážkové demo pre ovládanie hlasom pre akýkoľvek mikrokontróler, mikroprocesor, mikropočítač, ktorý vieme napojiť do internetu. Priamo v projekte je aj vzorový kód pre NodeMCU. Riešenie bolo testované pod PHP 5.6, 7.0 a s mikrokontrolérom NodeMCU v3 Lolin. Celé riešenie má výlučne výukový charakter, nejedná sa o profi riešenie. Riešenie nie je možné použiť na firemné (priemyselné) účely!
+Projekt je zameraný ako ukážkové demo pre ovládanie hlasom pre akýkoľvek mikrokontróler, mikroprocesor, mikropočítač, ktorý vieme napojiť do internetu. Priamo v projekte je aj vzorový kód pre NodeMCU. Riešenie bolo testované pod PHP 5.6, 7.0 a s mikrokontrolérom NodeMCU v3 Lolin a prehliadačom Chrome. Celé riešenie má výlučne výukový charakter, nejedná sa o profi riešenie. Riešenie nie je možné použiť na firemné (priemyselné) účely!
+
+# Ako to funguje?
+* Technológia (engine) Webkit je súčasťou prehliadačov Chrome a Safari. 
+* Dokáže prevziať a odoslať hlasovú vzorku na Google servery, ktoré ho vedia v response vrátiť ako text. 
+* S textom vieme pracovať, konvertovať ho na jednotný reťazec (príkaz), ktorý sa uloží do textového súboru. 
+* NodeMCU ho následne porovná s podmienkami v kóde a ak sa podmienka zhoduje, vykoná akciu.
+![alt text](https://i.nahraj.to/f/1TRj.PNG)
 
 # PODPORA A KONTAKT
 * Ak ma chcete podporiť/kontaktovať, navštívte moju stránku: https://arduino.php5.sk
