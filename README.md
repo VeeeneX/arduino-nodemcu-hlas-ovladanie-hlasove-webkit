@@ -6,7 +6,7 @@ Projekt je zameraný ako ukážkové demo pre ovládanie hlasom pre akýkoľvek 
 * Dokáže prevziať a odoslať hlasovú vzorku na Google servery, ktoré ho vedia v response vrátiť ako text. 
 * S textom vieme pracovať, konvertovať ho na jednotný reťazec (príkaz), ktorý sa uloží do textového súboru. 
 * NodeMCU ho následne porovná s podmienkami v kóde a ak sa podmienka zhoduje, vykoná akciu.
-![alt text](https://i.nahraj.to/f/1TRj.PNG)
+![alt text](https://i.nahraj.to/f/1TRk.PNG)
 
 # PODPORA A KONTAKT
 * Ak ma chcete podporiť/kontaktovať, navštívte moju stránku: https://arduino.php5.sk
