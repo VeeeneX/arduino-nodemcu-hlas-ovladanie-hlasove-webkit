@@ -12,6 +12,9 @@ Projekt je zameraný ako ukážkové demo pre ovládanie hlasom pre akýkoľvek 
 * NodeMCU ho následne porovná s podmienkami v kóde a ak sa podmienka zhoduje, vykoná akciu.
 ![alt text](https://i.nahraj.to/f/1TRk.PNG)
 
+# Instructables - Ako spustiť projekt? (EN)
+* https://www.instructables.com/id/NodeMCU-Voice-Control/
+
 # Príkazy v SK jazyku
 * 1 vyslovujte ako jeden alebo jedna
 * možné použiť pre 1-4
@@ -56,4 +59,7 @@ Projekt je zameraný ako ukážkové demo pre ovládanie hlasom pre akýkoľvek 
 * Čeština:  recognition.lang = "cs-CZ";
 * Angličtina: recognition.lang = "en-US";
 * Pre všetky dostupné jazyky pozri: https://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx
+
+# Demo video
+* https://www.youtube.com/watch?v=FwcPEALti4Y
 
