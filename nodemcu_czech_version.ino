@@ -47,7 +47,7 @@ void loop() {
  } else {
  Serial.println("certifikat nezhodny");
  }
-String url = "/preklady.txt";
+String url = "/PHP_cz/preklady.txt";
  Serial.print("poziadavka na adresu: ");
  Serial.println(url);
  client.print(String("GET ") + url + " HTTP/1.1\r\n" +
