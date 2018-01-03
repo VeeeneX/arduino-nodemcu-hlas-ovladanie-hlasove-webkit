@@ -105,3 +105,4 @@ String url = "/PHP_cz/preklady.txt";
  digitalWrite(led3, HIGH);
  digitalWrite(led4, HIGH);
  }
+}
