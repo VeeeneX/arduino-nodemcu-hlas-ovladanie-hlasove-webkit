@@ -18,8 +18,8 @@ void setup(){
  pinMode(led3, OUTPUT);
  pinMode(led4, OUTPUT);
  if (Ethernet.begin(mac) == 0) {
-    Serial.println("Failed to configure Ethernet using DHCP");
-    Ethernet.begin(mac, ip);
+    Serial.println("Nepodarilo sa nakonfigurovat po DHCP");
+    Ethernet.begin(mac, ip); //skusime s nasou IP
   }
   Serial.begin(9600); 
 }
