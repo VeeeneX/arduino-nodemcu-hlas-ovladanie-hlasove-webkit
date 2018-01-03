@@ -70,39 +70,43 @@ String url = "/PHP_sk/preklady.txt";
  if(line=="Zapni LED 1"){
  digitalWrite(led1, HIGH);
  }
- if(line=="Vypni LED 1"){
+ else if(line=="Vypni LED 1"){
  digitalWrite(led1, LOW);
  }
- if(line=="Zapni LED 2"){
+ else if(line=="Zapni LED 2"){
  digitalWrite(led2, HIGH);
  }
- if(line=="Vypni LED 2"){
+ else if(line=="Vypni LED 2"){
  digitalWrite(led2, LOW);
  }
- if(line=="Zapni LED 3"){
+ else if(line=="Zapni LED 3"){
  digitalWrite(led3, HIGH);
  }
- if(line=="Vypni LED 3"){
+ else if(line=="Vypni LED 3"){
  digitalWrite(led3, LOW);
  }
- if(line=="Zapni LED 4"){
+ else if(line=="Zapni LED 4"){
  digitalWrite(led4, HIGH);
  }
- if(line=="Vypni LED 4"){
+ else if(line=="Vypni LED 4"){
  digitalWrite(led4, LOW);
  }
- if(line=="Vypni"){
+ else if(line=="Vypni"){
 
  digitalWrite(led1, LOW);
  digitalWrite(led2, LOW);
  digitalWrite(led3, LOW);
  digitalWrite(led4, LOW);
  }
- if(line=="Zapni"){
+ else if(line=="Zapni"){
 
  digitalWrite(led1, HIGH);
  digitalWrite(led2, HIGH);
  digitalWrite(led3, HIGH);
  digitalWrite(led4, HIGH);
+ }
+ else{
+ Serial.println("Nepodporovana hlasova instrukcia: ");
+  Serial.println(line);
  }
 }
