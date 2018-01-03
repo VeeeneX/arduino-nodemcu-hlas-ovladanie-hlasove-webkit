@@ -1,6 +1,9 @@
 #include <SPI.h>
 #include <Ethernet.h>
-int led = 6;
+const int led1 = 5;
+const int led2 = 6;
+const int led3 = 7;
+const int led4 = 8;
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED }; //physical mac address
 char serverName[] = "www.mywebsite.com"; // zoomkat's test web page server
 IPAddress ip(192, 168, 2, 40);
@@ -9,7 +12,10 @@ String readString;
 int x=0; //for counting line feeds
 char lf=10; //line feed character
 void setup(){
-pinMode(led, OUTPUT);
+ pinMode(led1, OUTPUT);
+ pinMode(led2, OUTPUT);
+ pinMode(led3, OUTPUT);
+ pinMode(led4, OUTPUT);
  if (Ethernet.begin(mac) == 0) {
     Serial.println("Failed to configure Ethernet using DHCP");
     Ethernet.begin(mac, ip);
