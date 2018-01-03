@@ -41,7 +41,7 @@ void loop() {
  } else {
  Serial.println("certifficate didnt match");
  }
-String url = "/PHP/translations.txt"; //connect to that url of your webpage, link after host.
+String url = "/PHP_en/translations.txt"; //connect to that url of your webpage, link after host.
  Serial.print("Request to address: ");
  Serial.println(url);
  client.print(String("GET ") + url + " HTTP/1.1\r\n" +
