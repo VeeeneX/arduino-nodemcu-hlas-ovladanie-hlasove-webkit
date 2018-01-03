@@ -1,3 +1,9 @@
+// Author: Martin Chlebovec alias: martinius96
+// Donate: https://www.paypal.me/Chlebovec 
+// Personal website: https://arduino.php5.sk
+// Email contact: martinius96@gmail.com
+// Facebook contact: 100001242570317
+// Use under LICENSE 
 #include <SPI.h>
 #include <Ethernet.h>
 int led = 6;
