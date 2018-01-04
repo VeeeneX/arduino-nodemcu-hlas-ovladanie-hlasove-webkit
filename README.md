@@ -39,11 +39,11 @@ Projekt je zameraný ako ukážkové demo pre ovládanie hlasom pre akýkoľvek 
 * funguje i všechno nahradené s vše
 
 # Technológie v projekte
-* jazyk PHP, C, AJAX, Javascript, Webkit, Wiring (pre NodeMCU)
+* jazyk PHP, AJAX, Javascript, Webkit, Wiring (pre NodeMCU)
 ![alt text](http://www.veramate.com/Content/images/VeraMate/voice-control.png)
 
 # Projekt v repozitári je rozdelený na 2 časti
-* Časť NodeMCU - .ino súbor + .h knižnice
+* Časť mikrokontróler (NodeMCU/Arduino) - .ino súbor + .h knižnice
 * Časť servera - PHP, img, AJAX, Webkit
 
 # Pre správne fungovanie budete potrebovať
