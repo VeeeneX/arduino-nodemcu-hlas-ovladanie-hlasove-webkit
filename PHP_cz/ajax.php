@@ -12,7 +12,7 @@
     echo "Prázdne pole nezapíšu :-)!";
     exit();
 	
-  }elseif(strlen($prekklad) > 50){
+  }elseif(strlen($preklad) > 50){
     echo "Příliš dlouhé slovo!!";
 	 exit();
   }else{
