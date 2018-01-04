@@ -1,9 +1,8 @@
 # Ovládanie hlasom 
-Projekt je zameraný ako ukážkové demo pre ovládanie hlasom pre akýkoľvek mikrokontróler, mikroprocesor, mikropočítač, ktorý vieme napojiť do internetu. Priamo v projekte je aj vzorový kód pre NodeMCU. Riešenie bolo testované pod PHP 5.6, 7.0 a s mikrokontrolérom NodeMCU v3 Lolin a prehliadačom Chrome. Celé riešenie má výlučne výukový charakter, nejedná sa o profi riešenie. Riešenie nie je možné použiť na firemné (priemyselné) účely!
-
+Projekt je zameraný ako ukážkové demo pre ovládanie hlasom pre akýkoľvek mikrokontróler, mikroprocesor, mikropočítač, ktorý vieme napojiť do internetu. Priamo v projekte je aj vzorový kód pre NodeMCU. Riešenie bolo testované pod PHP 5.6, 7.0 a s mikrokontrolérom NodeMCU v3 Lolin, alebo Arduino + Ethernet shield W5100 a prehliadačom Chrome. Celé riešenie má výlučne výukový charakter, nejedná sa o profi riešenie. Riešenie nie je možné použiť na firemné (priemyselné) účely!
+* Pod Safari sa projekt ešte netestoval
 # PODPORA A KONTAKT
 * Ak ma chcete podporiť/kontaktovať, navštívte moju stránku: https://arduino.php5.sk
-![alt text](https://researchautism.org/wp-content/uploads/2016/03/interface-donate-hand-graphic-icon.png)
 
 # Ako to funguje?
 * Technológia (engine) Webkit je súčasťou prehliadačov Chrome a Safari. 
@@ -48,10 +47,10 @@ Projekt je zameraný ako ukážkové demo pre ovládanie hlasom pre akýkoľvek 
 * Časť servera - PHP, img, AJAX, Webkit
 
 # Pre správne fungovanie budete potrebovať
-* Webserver s HTTPS protokolom
-* Prehliadač Chrome
+* Webserver s HTTPS protokolom (i HTTP variantu pri používaní Ethernet shieldu)
+* Prehliadač Chrome (Safari)
 * Pripojenie k internetu
-* NodeMCU flashnutú na ArduinoIDE (Arduino Core)
+* NodeMCU flashnutú na ArduinoIDE (Arduino Core) alebo Arduino a Ethernet shield W5100
 
 # Zmena jazyka 
 * Zložka PHP index.php --> recognition.lang
