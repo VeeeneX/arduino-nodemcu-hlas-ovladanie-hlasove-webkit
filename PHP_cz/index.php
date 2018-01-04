@@ -89,5 +89,7 @@
      else if ($preklad=="Vypni" || $preklad=="Vypnout" || $preklad=="Vypni všechno" || $preklad=="Vypnout všechno" || $preklad=="Vypnout vše" || $preklad=="Vypni vše"){
               
       file_put_contents("preklady.txt", 'Vypni');
-     }     }
+     }     
+     }
+}
 ?>
