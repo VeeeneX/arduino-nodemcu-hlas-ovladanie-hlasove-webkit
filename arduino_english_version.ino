@@ -1,57 +1,59 @@
 // Author: Martin Chlebovec alias: martinius96
-// Donate: https://www.paypal.me/Chlebovec 
-// Personal website: https://arduino.php5.sk
+// Support: https://www.paypal.me/Chlebovec
+// Personal web: https://arduino.php5.sk
 // Email contact: martinius96@gmail.com
 // Facebook contact: 100001242570317
-// Use under LICENSE 
+// Use under license!
+// Don't use digital pins 4, 11, 12, 13
 #include <SPI.h>
 #include <Ethernet.h>
-int led = 6;
-byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED }; //physical mac address
-char serverName[] = "www.mywebsite.com"; // zoomkat's test web page server
-IPAddress ip(192, 168, 2, 40);
-EthernetClient client;
-String readString;
-int x=0; //for counting line feeds
-char lf=10; //line feed character
+const int led = 5;
+byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED }; //MAC address
+char serverName[] = "www.arduino.php5.sk"; // website for example test
+IPAddress ip(192, 168, 2, 40); //IP address
+EthernetClient client; //client mode
+String readString; //our parsing variable
+int x=0; //line counter
+char lf=10; //line feed
 void setup(){
-pinMode(led, OUTPUT);
+ pinMode(led, OUTPUT);
  if (Ethernet.begin(mac) == 0) {
-    Serial.println("Failed to configure Ethernet using DHCP");
-    Ethernet.begin(mac, ip);
+    Serial.println("DHCP unsucessful, trying again.");
+    Ethernet.begin(mac, ip); //try with our IP (static)
   }
   Serial.begin(9600); 
 }
 void loop(){
-if (client.connect(serverName, 80)) {  //starts client connection, checks for connection
-    Serial.println("connected");
-    client.println("GET /PHP_en/translations.txt HTTP/1.1"); //download text
-    client.println("Host: www.mywebsite.com");
-    client.println("Connection: close");  //close 1.1 persistent connection  
-    client.println(); //end of get request
+if (client.connect(serverName, 80)) { //Try HTTP connection
+    Serial.println("Connected");
+    client.println("GET /PHP_en/translations.txt HTTP/1.1"); //stiahni text zo suboru
+    client.println("Host: www.arduino.php5.sk"); //host --> rovnako ako v serverName
+    client.println("Connection: close");  //ukonc pripojenie
+    client.println(); //koniec requestu
   } 
   else {
-    Serial.println("connection failed"); //error message if no client connect
+    Serial.println("Connection unsucessful."); //Chybova hlaska o neuspesnom pripojeni na webserver
     Serial.println();
   }
-  while(client.connected() && !client.available()) delay(1); //waits for data
-  while (client.connected() || client.available()) { //connected or data available
-    char c = client.read(); //gets byte from ethernet buffer
-    Serial.print(c); //prints raw feed for testing
-    if (c==lf) x=(x+1); //counting line feeds
-    else if (x==12) readString += c; //building readString
+  while(client.connected() && !client.available()) delay(1); //little wait...
+  while (client.connected() || client.available()) { //if we are connected.. read
+    char c = client.read(); //read bytes from buffer
+    Serial.print(c); //raw feed from web with header
+    if (c==lf) x=(x+1); //count lines
+    else if (x==12) readString += c; //build string
    } 
-if(readString=="Turn on light"){
-  digitalWrite(led, HIGH); 
-  }else if(readString=="Turn off light"){
-  digitalWrite(led, LOW);  
-    }
-    else{
- Serial.println("Unsupported string/variable. Cannot do action. Please repeat your request on site.");
+if(readString=="Turn on"){
+ digitalWrite(led, HIGH);
  }
-  readString = ("");
-  x=0;
-  client.stop(); //stop client
-  delay(5000);
+ else if(readString=="Turn off"){
+ digitalWrite(led, LOW);
+ }
+ else{
+ Serial.println("Unsupported string, change on-line your voice/text input."); //bad string
+Serial.println(readString); //write to serial monitor what we got in variable
+ }
+  readString = (""); //clear String 
+  x=0; //clear line counter
+  client.stop(); //stop request
+  delay(5000); //again run loop after 5 seconds
 } 
-
