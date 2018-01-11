@@ -58,11 +58,11 @@
    
 
     
-          if ($preklad=="Zapni" || $preklad=="Zapnout"){
+          if ($preklad=="Zapni" || $preklad=="Zapnout" || $preklad=="zapni" || $preklad=="zapnout"){
      
       file_put_contents("preklady.txt", 'Zapni');
      }
-     else if ($preklad=="Vypni" || $preklad=="Vypnout"){
+     else if ($preklad=="Vypni" || $preklad=="Vypnout" || $preklad=="vypni" || $preklad=="vypnout"){
               
       file_put_contents("preklady.txt", 'Vypni');
      }
