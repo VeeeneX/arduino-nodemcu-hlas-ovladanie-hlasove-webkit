@@ -55,11 +55,11 @@
   }elseif(strlen($preklad) > 50){
     echo "Tvoja požiadavka je príliš dlhá!";
   }else{
-    if ($preklad=="Zapni" || $preklad=="Zapnúť"){
+    if ($preklad=="Zapni" || $preklad=="Zapnúť" || $preklad=="zapni" || $preklad=="zapnúť"){
      
       file_put_contents("preklady.txt", 'Zapni');
      }
-     else if ($preklad=="Vypni" || $preklad=="Vypnúť"){
+     else if ($preklad=="Vypni" || $preklad=="Vypnúť" || $preklad=="vypni" || $preklad=="vypnúť"){
               
       file_put_contents("preklady.txt", 'Vypni');
      }
