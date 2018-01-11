@@ -6,23 +6,17 @@
 // Používajte v súhade s licenciou!
 #include <ESP8266WiFi.h> //kniznica importovana v Arduine core, testovana verzia 2.3.0
 #include <WiFiClientSecure.h> //kniznica importovana v Arduine core, testovana verzia 2.3.0
-const int led1 = 16;
-const int led2 = 5;
-const int led3 = 4;
-const int led4 = 0;
+const int led = 16; //GPIO 16 = D0 on NodeMCU board
 const char* ssid = "wifimeno";
 const char* password = "heslo";
-const char* host = "vasastranka.sk"; //bez https a www
-const int httpsPort = 443;
+const char* host = "arduino.php5.sk"; //bez https a www
+const int httpsPort = 443; //https port
 const char* fingerprint = "13 9f 87 1d b1 85 be e6 bd 73 c1 8d 04 63 58 99 f0 32 43 92"; // odtlacok certifikatu SHA1
 void setup() {
  Serial.begin(115200);
  Serial.println();
- pinMode(led1, OUTPUT);
- pinMode(led2, OUTPUT);
- pinMode(led3, OUTPUT);
- pinMode(led4, OUTPUT);
- Serial.print("pripajam na ");
+ pinMode(led, OUTPUT);
+ Serial.print("pripajam na wifi siet: ");
  Serial.println(ssid);
  WiFi.begin(ssid, password);
  while (WiFi.status() != WL_CONNECTED) {
@@ -30,13 +24,13 @@ void setup() {
  Serial.print(".");
  }
  Serial.println("");
- Serial.println("WiFi pripojene");
+ Serial.println("WiFi uspesne pripojene");
  Serial.println("IP adresa: ");
  Serial.println(WiFi.localIP());
 }
 void loop() {
- WiFiClientSecure client;
- Serial.print("pripajam sa na ");
+ WiFiClientSecure client; //funkcia pre HTTPS spojenia
+ Serial.print("pripajam sa na server ");
  Serial.println(host);
  if (!client.connect(host, httpsPort)) {
  Serial.println("pripojenie neuspesne");
@@ -65,48 +59,13 @@ String url = "/PHP_cz/preklady.txt";
  }
  String line = client.readStringUntil('\n');
  Serial.println("Vratena premenna: ");
- Serial.println("==========");
  Serial.println(line);
- if(line=="Zapni LED 1"){
- digitalWrite(led1, HIGH);
+ if(line=="Zapni"){ //zapnem vystup (rele alebo diodu)
+ digitalWrite(led, HIGH);
  }
- else if(line=="Vypni LED 1"){
- digitalWrite(led1, LOW);
- }
- else if(line=="Zapni LED 2"){
- digitalWrite(led2, HIGH);
- }
- else if(line=="Vypni LED 2"){
- digitalWrite(led2, LOW);
- }
- else if(line=="Zapni LED 3"){
- digitalWrite(led3, HIGH);
- }
- else if(line=="Vypni LED 3"){
- digitalWrite(led3, LOW);
- }
- else if(line=="Zapni LED 4"){
- digitalWrite(led4, HIGH);
- }
- else if(line=="Vypni LED 4"){
- digitalWrite(led4, LOW);
- }
- else if(line=="Vypni"){
-
- digitalWrite(led1, LOW);
- digitalWrite(led2, LOW);
- digitalWrite(led3, LOW);
- digitalWrite(led4, LOW);
- }
- else if(line=="Zapni"){
-
- digitalWrite(led1, HIGH);
- digitalWrite(led2, HIGH);
- digitalWrite(led3, HIGH);
- digitalWrite(led4, HIGH);
- }
- else{
- Serial.println("Nepodporovana hlasova instrukcia: ");
-  Serial.println(line);
+ else if(line=="Vypni"){ //vypnem vystup (rele alebo diodu)
+ digitalWrite(led, LOW);
+ }else{
+ Serial.println("Nepodporovana hlasova instrukcia, opakujte vasu hlasovu poziadavku online");
  }
 }
