@@ -15,35 +15,23 @@ Projekt je zameraný ako ukážkové demo pre ovládanie hlasom pre akýkoľvek 
 * https://www.instructables.com/id/NodeMCU-Voice-Control/
 
 # Príkazy v SK jazyku
-* 1 vyslovujte ako jeden alebo jedna
-* možné použiť pre 1-4
-* Zapni LED 1
-* Zapnúť LED 1 
-* Vypnúť LED 1
-* Vypni LED 1
-* Zapni všetko
-* Vypni  všetko
-* Zapnúť všetko
-* Vypnúť všetko
+* Zapni
+* Zapnúť
+* Vypni
+* Vypnúť
+
 # Príkazy v CZ jazyku
-* 1 vyslovujte ako jeden alebo jedna
-* možné použiť pre 1-4
-* Zapni LED 1
-* Zapnout LED 1 
-* Vypnout LED 1
-* Vypni LED 1
-* Zapni všechno
-* Vypni všechno
-* Zapnout všechno
-* Vypnout všechno
-* funguje i všechno nahradené s vše
+* Zapni
+* Zapnout
+* Vypni
+* Vypnout
 
 # Technológie v projekte
 * jazyk PHP, AJAX, Javascript, Webkit, Wiring (pre NodeMCU)
 ![alt text](http://www.veramate.com/Content/images/VeraMate/voice-control.png)
 
 # Projekt v repozitári je rozdelený na 2 časti
-* Časť mikrokontróler (NodeMCU/Arduino) - .ino súbor + .h knižnice
+* Časť mikrokontróler (NodeMCU/Arduino) - .ino súbor s testom funkcionality
 * Časť servera - PHP, img, AJAX, Webkit
 
 # Pre správne fungovanie budete potrebovať
@@ -53,7 +41,7 @@ Projekt je zameraný ako ukážkové demo pre ovládanie hlasom pre akýkoľvek 
 * NodeMCU flashnutú na ArduinoIDE (Arduino Core) alebo Arduino a Ethernet shield W5100
 
 # Zmena jazyka 
-* Zložka PHP index.php --> recognition.lang
+* Zložka PHP_(prefix) index.php --> recognition.lang
 * Slovenčina: recognition.lang = "sk-SK";
 * Čeština:  recognition.lang = "cs-CZ";
 * Angličtina: recognition.lang = "en-US";
