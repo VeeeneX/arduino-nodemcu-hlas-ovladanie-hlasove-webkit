@@ -15,13 +15,12 @@
   }elseif(strlen($preklad) > 50){
     echo "Příliš dlhé slovo/spojenie!";
 	 exit();
-  }else{
-    
-            if ($preklad=="Zapni" || $preklad=="Zapnúť"){
+  }else{   
+        if ($preklad=="Zapni" || $preklad=="Zapnúť" || $preklad=="zapni" || $preklad=="zapnúť"){
      
       file_put_contents("preklady.txt", 'Zapni');
      }
-     else if ($preklad=="Vypni" || $preklad=="Vypnúť"){
+     else if ($preklad=="Vypni" || $preklad=="Vypnúť" || $preklad=="vypni" || $preklad=="vypnúť"){
               
       file_put_contents("preklady.txt", 'Vypni');
      }
