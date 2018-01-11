@@ -35,7 +35,7 @@
            if ($translation=="turn on" || $translation=="Turn on"){
       file_put_contents("translations.txt", 'Turn on');
            }else if($translation=="turn off" || $translation=="Turn off"){
-               file_put_contents("translations.txt", 'Turn off light');
+               file_put_contents("translations.txt", 'Turn off');
      }
      }
      }
