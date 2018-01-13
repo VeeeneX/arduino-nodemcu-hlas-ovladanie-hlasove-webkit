@@ -5,10 +5,9 @@
 // Facebook kontakt: 100001242570317
 // Používajte v súhade s licenciou!
 // nepouzivajte piny 4, 11, 12, 13
-#
-include < SPI.h > //knižnica pre SPI pripojenie, ktore Ethernet shield využiva
-  #include < Ethernet.h >
-  const int led = 5;
+#include <SPI.h> //knižnica pre SPI pripojenie, ktore Ethernet shield využiva
+#include <Ethernet.h>
+const int led = 5;
 byte mac[] = {
   0xDE,
   0xAD,
