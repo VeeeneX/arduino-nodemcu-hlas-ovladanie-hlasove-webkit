@@ -4,10 +4,9 @@
 // Email kontakt: martinius96@gmail.com
 // Facebook kontakt: 100001242570317
 // Používajte v súhade s licenciou!
-#
-include < ESP8266WiFi.h > //kniznica importovana v Arduine core, testovana verzia 2.3.0
-  #include < WiFiClientSecure.h > //kniznica importovana v Arduine core, testovana verzia 2.3.0
-  const int led = 16; //GPIO 16 = D0 on NodeMCU board
+#include <ESP8266WiFi.h> //kniznica importovana v Arduine core, testovana verzia 2.3.0
+#include <WiFiClientSecure.h> //kniznica importovana v Arduine core, testovana verzia 2.3.0
+const int led = 16; //GPIO 16 = D0 on NodeMCU board
 const char * ssid = "wifimeno";
 const char * password = "heslo";
 const char * host = "arduino.php5.sk"; //bez https a www
