@@ -4,10 +4,9 @@
 // Email contact: martinius96@gmail.com
 // Facebook contact: 100001242570317
 // Use under license!
-#
-include < ESP8266WiFi.h > //library included in Arduino core, tested under 2.3.0
-  #include < WiFiClientSecure.h > //library included in Arduino core, tested under 2.3.0 for HTTPS connections
-  const int led = 16; //GPIO 16 = D0 on NodeMCU board
+#include <ESP8266WiFi.h> //library included in Arduino core, tested under 2.3.0
+#include <WiFiClientSecure.h> //library included in Arduino core, tested under 2.3.0 for HTTPS connections
+const int led = 16; //GPIO 16 = D0 on NodeMCU board
 const char * ssid = "wifi ssid";
 const char * password = "password";
 const char * host = "arduino.php5.sk"; //without https and www
